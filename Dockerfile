@@ -9,8 +9,5 @@ LABEL maintainer="Rabbir admin@cs.cheap"
 # Docker 内用户切换到 root
 USER root
 
-# 替换为带 OpenVPN 认证信息文件启动的脚本
-COPY script/entrypoint.sh /usr/local/bin/entrypoint.sh
-
 # 启动命令
 ENTRYPOINT ["/bin/bash", "/usr/local/bin/entrypoint.sh"]
