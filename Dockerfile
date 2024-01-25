@@ -1,7 +1,6 @@
-# 基础镜像为 openvpn-socks5
-# Docker Hub: https://hub.docker.com/r/curve25519xsalsa20poly1305/openvpn-socks5
-# GitHub: https://github.com/curve25519xsalsa20poly1305/docker-openvpn-socks5
-FROM curve25519xsalsa20poly1305/openvpn-socks5
+# 基础镜像为 openvpn
+# Docker Hub: https://hub.docker.com/r/curve25519xsalsa20poly1305/openvpn/
+FROM curve25519xsalsa20poly1305/openvpn
 
 # 维护者信息
 LABEL maintainer="Rabbir admin@cs.cheap"
@@ -10,4 +9,4 @@ LABEL maintainer="Rabbir admin@cs.cheap"
 USER root
 
 # 启动命令
-ENTRYPOINT ["/bin/bash", "/usr/local/bin/entrypoint.sh"]
+ENTRYPOINT ["entrypoint.sh"]
